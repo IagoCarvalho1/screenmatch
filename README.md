@@ -345,3 +345,176 @@ Similar ao setNumero, pode-se adicionar validações para a agência. Novamente,
     }
 Lembre-se que a melhor forma de lidar com um valor inválido (no caso, um saldo negativo) depende do contexto da sua aplicação. Lançar uma exceção (IllegalArgumentException) é geralmente a melhor prática, pois permite que o código que chama o setter trate o erro adequadamente. Imprimir uma mensagem de erro pode ser suficiente em alguns casos, mas pode dificultar o tratamento de erros em aplicações maiores. Ignorar a operação é geralmente a pior opção, pois pode levar a erros silenciosos e difíceis de depurar.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#######################################################################################################################################################################################
+
+Em Java, getters e setters são métodos usados para acessar e modificar os valores das variáveis privadas de uma classe. Isso segue o princípio de encapsulamento, que protege os dados da classe de acessos ou alterações indevidos.
+
+Por que usar getters e setters?
+Controle de acesso: Você pode decidir quem pode ler ou modificar os valores.
+Validação: Pode incluir regras para aceitar ou rejeitar valores no setter.
+Manutenção: Facilita a atualização do código no futuro sem mudar como ele é usado.
+Estrutura básica:
+
+    public class Pessoa {
+    // Variável privada (não acessada diretamente)
+    private String nome;
+    
+        // Getter (pega o valor da variável)
+        public String getNome() {
+            return nome;
+        }
+    
+        // Setter (altera o valor da variável)
+        public void setNome(String nome) {
+            this.nome = nome; // `this` se refere ao atributo da classe
+        }
+    }
+Exemplo prático:
+
+    public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+
+            // Usando o setter para definir o valor
+            pessoa.setNome("João");
+    
+            // Usando o getter para obter o valor
+            System.out.println(pessoa.getNome()); // Saída: João
+        }
+    }
+Vantagem de usar:
+Se você precisar adicionar uma validação, pode alterar o setter sem modificar o resto do código:
+
+    public void setNome(String nome) {
+        if (nome == null || nome.isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode ser vazio!");
+        }
+            this.nome = nome;
+    }
+Com isso, getters e setters tornam seu código mais seguro, flexível e organizado.
+
+A função de cada um é bem direta:
+
+Getter
+Função: Recuperar o valor de um atributo privado da classe.
+Por que usar? Permite acesso controlado à leitura do valor, evitando acessos diretos às variáveis da classe.
+Exemplo de função do getter:
+
+        public String getNome() {
+        return nome; 
+        // Retorna o valor da variável `nome`
+        }
+Setter
+Função: Alterar o valor de um atributo privado da classe.
+Por que usar? Permite controlar ou validar o valor antes de atribuí-lo ao atributo.
+Exemplo de função do setter:
+
+
+    public void setNome(String nome) {
+        this.nome = nome; // Define o valor da variável `nome`
+    }
+Resumo
+Getter: Serve para ler o valor.
+Setter: Serve para modificar o valor.
+Ao usar ambos, você garante o encapsulamento e mantém o controle sobre como os atributos da classe são acessados e alterados.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#######################################################################################################################################################################################
+
+Para saber mais: Entendendo melhor a herança:
+
+A herança é um conceito fundamental da orientação a objetos, sendo implementada em Java através da relação é um entre classes. Isso significa que uma classe pode herdar atributos e métodos de outra classe, tornando com isso o código mais reutilizável.
+
+No Java, a herança é realizada através da palavra-chave extends. A classe que herda é chamada de subclasse, e a classe que é herdada é chamada de superclasse. A subclasse pode acessar todos os atributos e métodos públicos e protegidos da superclasse, além de poder sobrescrever os métodos da superclasse para criar comportamentos específicos.
+
+Por exemplo:
+
+    public class Conta {
+    
+    private String titular;
+    private double saldo;
+    
+    public void sacar(double valor) {
+    if (valor <= 0) {
+    System.out.println("Valor deve ser maior do que zero!");
+    } else if (saldo >= valor) {
+    saldo -= valor;
+    System.out.println("Saque realizado com sucesso. Saldo atual: " +saldo);
+    } else {
+    System.out.println("Saldo insuficiente.");
+    }
+    }
+    
+    public void depositar(double valor) {
+    if (valor > 0) {
+    saldo += valor;
+    System.out.println("Depósito realizado com sucesso. Saldo atual: " +saldo);
+    } else {
+    System.out.println("Valor deve ser maior do que zero!");
+    }
+    }
+    
+    //getters e setters
+    }
+--------------------------------------------------------
+    public class ContaPoupanca extends Conta {
+    
+    private double taxaDeJuros;
+    
+    public void calcularJuros() {
+    double juros = this.getSaldo() * taxaDeJuros;
+    System.out.println("Juros atual: " +juros);
+    }
+    
+    public void sacar(double valor) {
+    double taxaSaque = 0.01;
+    super.sacar(valor + taxaSaque);
+    }
+    
+    //getters e setters
+    }
+
+No código anterior, a classe Conta é a superclasse e a classe ContaPoupanca é a subclasse. A classe ContaPoupanca herda os atributos e métodos da classe Conta, e adiciona um novo atributo taxaDeJuros e um novo método calcularJuros. Embora os atributos sejam herdados, como eles foram declarados como private na superclasse, não poderão ser acessados diretamente na subclasse, devendo então serem utlizados os métodos getters/setter, que são públicos.
+
+Repare também no código anterior que a subclasse sobrescreveu o método sacar, para que seja descontada a taxa de saque, além de utilizar a palavra chave super para chamar o método da superclasse, evitando com isso duplicar um código já existente. Essa é a grande vantagem da herança: reaproveitamento de código com flexibilidade para sobrescrever comportamentos.
+
+Herança múltipla
+Em Java, é importante notar que a herança múltipla não é permitida. A herança múltipla ocorre quando uma subclasse herda de duas ou mais superclasses. Por exemplo:
+
+    public class ContaPoupanca extends Conta, Pagamento {
+    //codigo da classe omitido
+    }
+O código anterior não compila, pois o extends aceita apenas uma única classe, ou seja, uma classe pode ter apenas uma superclasse.
+
+Entretanto, é possível criar uma hierarquia de classes utilizando herança, simulando com isso uma herança múltipla. Por exemplo:
+
+    public class Conta {
+    //codigo da classe omitido
+    }
+-------------------------------------------------------------------
+    public class ContaCorrente extends Conta {
+    //codigo da classe omitido
+    }
+--------------------------------------------------------------------
+    public class ContaCorrentePessoaFisica extends ContaCorrente {
+    //codigo da classe omitido
+    }
+    
+No código anterior, a classe ContaCorrentePessoaFisica está herdando de ContaCorrente, que por sua vez herda da classe Conta, ou seja, indiretamente a classe ContaCorrentePessoaFisica vai herdar de Conta, pois sua superclasse herda dela.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#######################################################################################################################################################################################
+
+Para saber mais: Anotações no Java:
+
+As anotações, também conhecidas como annotations, são uma forma de adicionar configurações ao código Java de uma maneira bem simples. Elas são usadas para fornecer informações adicionais sobre o código, como o significado de uma classe, um método ou um atributo.
+
+No Java, as anotações são definidas com o uso do símbolo "@" seguido do nome da anotação. Por exemplo, a anotação @Deprecated é usada para indicar que um método ou classe está obsoleto e não deve ser mais utilizado. Outra anotação muito útil é a @Override, conforme foi demonstrado no último vídeo, que indica que um método está sobrescrevendo o mesmo método definido na sua classe mãe.
+
+Diversas especificações e frameworks Java, como Hibernate, Bean Validation e Spring, utilizam anotações. Por exemplo, no Bean Validation a anotação @NotNull é usada para validar que um atributo não seja nulo.
+
+As anotações são muito úteis e comuns em aplicações Java, sendo importante que você esteja familiarizado com esse recurso, pois certamente o utilizará bastante em seus projetos.
