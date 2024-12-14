@@ -167,7 +167,6 @@ Não deixe de entrar no site do JavaDoc e explorar os pacotes e classes que a li
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 Para saber mais: Padrão de nomes de pacotes
 
 Em Java, pacotes são usados para agrupar classes que estão relacionadas a alguma funcionalidade. Eles ajudam a organizar o código, facilitando o seu gerenciamento e evitando que centenas de classes distintas fiquem todas misturadas num único diretório.
@@ -180,7 +179,7 @@ Isso ajuda a garantir que o nome do pacote seja exclusivo e evita conflitos de n
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-##################################################################################################################################################################
+
 
 “This”, traduzindo para o português (Isto/este/esta), é usado para fazer referência aos atributos da classe, especialmente em métodos que têm parâmetros com o mesmo nome do atributo da classe em que estamos trabalhando.
 
@@ -340,8 +339,8 @@ Similar ao setNumero, pode-se adicionar validações para a agência. Novamente,
     }
 Lembre-se que a melhor forma de lidar com um valor inválido (no caso, um saldo negativo) depende do contexto da sua aplicação. Lançar uma exceção (IllegalArgumentException) é geralmente a melhor prática, pois permite que o código que chama o setter trate o erro adequadamente. Imprimir uma mensagem de erro pode ser suficiente em alguns casos, mas pode dificultar o tratamento de erros em aplicações maiores. Ignorar a operação é geralmente a pior opção, pois pode levar a erros silenciosos e difíceis de depurar.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 Em Java, getters e setters são métodos usados para acessar e modificar os valores das variáveis privadas de uma classe. Isso segue o princípio de encapsulamento, que protege os dados da classe de acessos ou alterações indevidos.
@@ -501,7 +500,6 @@ No código anterior, a classe ContaCorrentePessoaFisica está herdando de ContaC
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 Para saber mais: Anotações no Java:
 
 As anotações, também conhecidas como annotations, são uma forma de adicionar configurações ao código Java de uma maneira bem simples. Elas são usadas para fornecer informações adicionais sobre o código, como o significado de uma classe, um método ou um atributo.
