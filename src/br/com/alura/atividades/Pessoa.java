@@ -1,7 +1,17 @@
 package br.com.alura.atividades;
 
 public class Pessoa {
-   void saudacao(){
-       System.out.println("Olá mundo!");
-   }
+   private String nome;
+   private int idade;
+
+    public Pessoa(String nome, int idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    @Override
+    public String toString() {
+        return this.nome + "(" + this.idade + ")";
+    }
+
 }
