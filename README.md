@@ -87,7 +87,7 @@ O modificador de acesso public é o mais permissivo de todos. Uma classe, atribu
         // lógica de saque...
       }
     }
-    Copiar código
+----------------------------------------------------------------
     public class Principal {
         
         public static void main(String[] args) {
@@ -111,7 +111,7 @@ O modificador de acesso default é aquele que não especifica nenhum modificador
         // lógica de saque...
       }
     }
-    Copiar código
+--------------------------------------------------------
     package br.com.alura.testes;
     
     public class Principal {
