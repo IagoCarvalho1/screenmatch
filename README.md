@@ -88,7 +88,7 @@ O modificador de acesso public é o mais permissivo de todos. Uma classe, atribu
       }
     }
 ----------------------------------------------------------------
-    public class Principal {
+    public class br.com.alura.principal.Principal {
         
         public static void main(String[] args) {
             Conta c1 = new Conta();
@@ -114,7 +114,7 @@ O modificador de acesso default é aquele que não especifica nenhum modificador
 --------------------------------------------------------
     package br.com.alura.testes;
     
-    public class Principal {
+    public class br.com.alura.principal.Principal {
         
         public static void main(String[] args) {
             Conta c1 = new Conta();
@@ -124,7 +124,7 @@ O modificador de acesso default é aquele que não especifica nenhum modificador
     
     }
 
-No código anterior, a classe Conta está em um pacote e a classe Principal em outro pacote distinto. A classe Conta pode ser instanciada dentro da classe Principal, pois ela possui o modificador de acesso public, entretanto, o atributo saldo e o método sacar tem o modificador default e, portanto, não podem ser acessados de dentro da classe Principal, o que vai causar um erro de compilação no código anterior.
+No código anterior, a classe Conta está em um pacote e a classe br.com.alura.principal.Principal em outro pacote distinto. A classe Conta pode ser instanciada dentro da classe br.com.alura.principal.Principal, pois ela possui o modificador de acesso public, entretanto, o atributo saldo e o método sacar tem o modificador default e, portanto, não podem ser acessados de dentro da classe br.com.alura.principal.Principal, o que vai causar um erro de compilação no código anterior.
 
 Private
 O modificador de acesso private é o mais restritivo de todos. Uma classe, atributo ou método declarado como private só pode ser acessado dentro da própria classe. Ou seja, ele possui visibilidade restrita e não pode ser utilizado por outras classes. Por exemplo:
@@ -138,7 +138,7 @@ O modificador de acesso private é o mais restritivo de todos. Uma classe, atrib
         }
     }
    
-    public class Principal {
+    public class br.com.alura.principal.Principal {
     
         public static void main(String[] args) {
             Conta c1 = new Conta();
@@ -147,7 +147,7 @@ O modificador de acesso private é o mais restritivo de todos. Uma classe, atrib
         }
     
     }
-No código anterior, vai ocorrer erro de compilação na classe Principal, pois o atributo saldo e o método sacar foram declarados como private, não podendo com isso serem acessados de fora da própria classe Conta.
+No código anterior, vai ocorrer erro de compilação na classe br.com.alura.principal.Principal, pois o atributo saldo e o método sacar foram declarados como private, não podendo com isso serem acessados de fora da própria classe Conta.
 
 Existe ainda um último modificador de acesso, que é o protected, mas falaremos dele mais adiante no curso, após ser apresentado o conceito de herança de classes.
 
@@ -722,3 +722,91 @@ Tamanho fixo: o tamanho de um array é fixo e não pode ser alterado após a sua
 Ausência de métodos: arrays não possuem métodos que permitam a inserção, remoção ou pesquisa de elementos de forma eficiente. Isso pode levar a soluções de código complicadas e ineficientes para tarefas simples.
 
 Justamente por conta desses problemas e dificuldades é que não devemos utilizar arrays para representar uma coleção de elementos, mas sim alguma classe do Java, como a ArrayList, que encapsula e abstrai um array, facilitando a sua utilização via métodos e deixando o código do projeto mais simples de entender e evoluir.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Para saber mais: Construtor padrão
+
+Em Java, um construtor é um método especial usado para criar e inicializar um objeto recém-criado. Quando uma classe é definida, ela pode ter um ou mais construtores, sendo que se nenhum construtor for definido explicitamente, o Java criará um construtor default (padrão) automaticamente.
+
+Um construtor default é um construtor que não possui parâmetros e não executa nenhuma instrução. Ele é chamado sempre que um objeto da classe é criado sem argumentos. Por exemplo:
+
+    public class Pessoa {
+    
+        private String nome;
+        private String email;
+    
+        public Pessoa() {
+        }
+    
+        //metodos getters/setters
+    }
+
+No exemplo de código anterior, a classe Pessoa possui um construtor default, que será exatamente o mesmo construtor que o Java criará automaticamente, caso nenhum construtor tivesse sido definido na classe.
+
+Se uma classe define explicitamente um ou mais construtores, mas não define um construtor sem parâmetros, então não há construtor default. Nesse caso, se um objeto é criado sem argumentos, um erro de compilação será gerado.
+
+É importante ressaltar que mesmo que um construtor default possa ser útil em alguns casos, é sempre recomendável definir explicitamente os construtores da classe, especialmente se a classe tiver atributos que precisam ser inicializados com valores específicos ou obrigatórios. Isso também torna o código mais claro e fácil de entender.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Para saber mais: Outras formas de percorrer a lista:
+
+A forma mais comum de percorrer uma lista no Java é utilizando o laço foreach tradicional, também conhecido como for-each. Esse laço permite que se percorra todos os elementos de uma lista, sem a necessidade de se preocupar com índices ou o tamanho dela, tornando o código mais simples e legível. Por exemplo, suponha que tenhamos uma lista de nomes de pessoas e que desejamos imprimi-los na tela:
+
+      ArrayList<String> nomes = new ArrayList<>();
+      nomes.add("Jacqueline");
+      nomes.add("Paulo");
+      nomes.add("Suellen");
+      nomes.add("Emily");
+      
+      for (String nome : nomes) {
+      System.out.println(nome);
+    }
+
+Esse loop for percorre todos os elementos da lista, atribuindo cada um deles à variável nome, que é usada para imprimir o valor na tela. Esse tipo de loop é muito útil em situações onde não precisamos realizar nenhuma operação complexa sobre os elementos da lista.
+
+No entanto, a partir do Java 8, foi adicionado na interface List, a qual a classe ArrayList implementa, um novo método chamado forEach, que possibilita a iteração sobre os elementos da lista de forma mais concisa e elegante. Por exemplo, o exemplo anterior pode ser reescrito utilizando o método forEach da seguinte forma:
+
+    nomes.forEach(nome -> System.out.println(nome));
+
+Nesse caso, o método forEach é chamado sobre a lista nomes e recebe como parâmetro uma expressão lambda que realiza a impressão do valor na tela. A expressão lambda nome -> System.out.println(nome) é uma forma compacta de definir uma função que recebe um parâmetro nome e realiza a operação de impressão.
+
+É possível simplificar ainda mais o exemplo de código anterior, utilizando o recurso conhecido como Method Reference, que nada mais é do que uma forma reduzida de uma expressão lambda:
+
+    nomes.forEach(System.out::println);
+
+No código anterior, o símbolo :: é a sintaxe do Method Reference, que no exemplo mostrado faz uma referência para o método println.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Referências são ponteiros para objetos em memória, ou seja, elas apontam para um objeto e permitem que você trabalhe com ele. No Java, toda variável de objeto é na verdade uma referência a esse objeto que foi alocado na memória.
+
+Quando você instancia um objeto, está, na realidade, criando um novo bloco de memória que armazena as informações desse objeto. A maneira de chegar a esse bloco de memória, para armazenar e ler informações dele, ocorre por meio de uma referência, que é representada por uma variável. Por exemplo:
+
+Filme filme1 = new Filme("Avatar", 2009);Copiar código
+No exemplo de código anterior, criamos um novo objeto da classe Filme e armazenamos uma referência a ele na variável filme1.
+
+É importante lembrar que as referências a objetos em Java não são o próprio objeto em si, pois elas apenas apontam para o objeto. Quando você passa uma referência a um método ou atribui uma referência a outra variável, está apenas copiando o valor da referência e não do objeto em si. Por exemplo:
+
+    Filme filme1 = new Filme("Avatar", 2009);
+    Filme filme2 = new Filme("The Matrix", 1999);
+    Filme filme3 = filme1;
+
+No exemplo de código anterior, foram criados apenas dois objetos em memória. A variável filme3 é apenas uma referência que aponta para o mesmo objeto sendo referenciado pela variável filme1.
+
+Uma questão importante relacionada com referências a objetos em Java é a questão da igualdade e identidade de objetos. Quando você compara duas referências de objeto usando o operador de igualdade ==, está comparando as referências em si, não os objetos que elas apontam. Por exemplo:
+
+    Filme filme1 = new Filme("Avatar", 2009);
+    Filme filme2 = new Filme("Avatar", 2009);
+    
+    if (filme1 == filme2) {
+    System.out.println("Iguais");
+    } else {
+    System.out.println("Diferentes");
+    }
+
+No exemplo de código anterior, a saída no console será: "Diferentes". Embora os dois objetos tenham as mesmas informações na memória, a comparação com == verifica se as referências são iguais, ou seja, se apontam para o mesmo objeto na memória.
