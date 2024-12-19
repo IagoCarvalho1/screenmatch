@@ -810,3 +810,6 @@ Uma questão importante relacionada com referências a objetos em Java é a ques
     }
 
 No exemplo de código anterior, a saída no console será: "Diferentes". Embora os dois objetos tenham as mesmas informações na memória, a comparação com == verifica se as referências são iguais, ou seja, se apontam para o mesmo objeto na memória.
+
+
+Checar atividade "Trabalhando com listas e coleções de dados"
