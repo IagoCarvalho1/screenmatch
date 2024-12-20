@@ -15,34 +15,34 @@ Operadores aritméticos:
 
 Os operadores aritméticos são usados para realizar operações matemáticas básicas. São eles:
 
-"+" (adição)
-"-" (subtração)
-"*" (multiplicação)
-"/" (divisão)
-"%" (resto da divisão)
-    int a = 10 + 5; // Atribui o valor 15 à variável a
-    int b = 10 - 5; // Atribui o valor 5 à variável b
-    int c = 10 * 5; // Atribui o valor 50 à variável c
-    int d = 10 / 5; // Atribui o valor 2 à variável d
-    int e = 10 % 3; // Atribui o valor 1 à variável e (o resto da divisão de 10 por 3 é 1)
+    "+" (adição)
+    "-" (subtração)
+    "*" (multiplicação)
+    "/" (divisão)
+    "%" (resto da divisão)
+        int a = 10 + 5; // Atribui o valor 15 à variável a
+        int b = 10 - 5; // Atribui o valor 5 à variável b
+        int c = 10 * 5; // Atribui o valor 50 à variável c
+        int d = 10 / 5; // Atribui o valor 2 à variável d
+        int e = 10 % 3; // Atribui o valor 1 à variável e (o resto da divisão de 10 por 3 é 1)
 Operadores relacionais:
 
 Os operadores relacionais são usados para comparar valores. Eles retornam um valor booleano (verdadeiro ou falso). Trabalharemos melhor com eles quando estivermos na aula de condicionais, onde vamos modificar o fluxo da aplicação dada alguma condição. São eles:
 
-"==" (igual a)
-"!=" (diferente de)
-">" (maior que)
-">=" (maior ou igual a)
-"<" (menor que)
-"<=" (menor ou igual a)
-    int a = 10; // Atribui o valor 10 à variável a
-    int b = 5; // Atribui o valor 5 à variável b
-    int c = 30; // Atribui o valor 30 à variável c
+    "==" (igual a)
+    "!=" (diferente de)
+    ">" (maior que)
+    ">=" (maior ou igual a)
+    "<" (menor que)
+    "<=" (menor ou igual a)
+        int a = 10; // Atribui o valor 10 à variável a
+        int b = 5; // Atribui o valor 5 à variável b
+        int c = 30; // Atribui o valor 30 à variável c
     
-    boolean igual = (b == a); //Nesse caso a variável igual ficará com o valor *false*, pois o valor de b não é igual o valor de a.
-    boolean diferente = (b != c); //A variável diferente ficará com o valor *true*, pois o valor de b é diferente do valor de c.
-    boolean maior = (b > a); //A variável maior ficará com o valor *false*, pois o valor de b é menor que o valor de a.
-    boolean menorIgual = (b <= c); //A variável menorIgual ficará com o valor *true*, pois o valor de b é menor que o valor de c.
+        boolean igual = (b == a); //Nesse caso a variável igual ficará com o valor *false*, pois o valor de b não é igual o valor de a.
+        boolean diferente = (b != c); //A variável diferente ficará com o valor *true*, pois o valor de b é diferente do valor de c.
+        boolean maior = (b > a); //A variável maior ficará com o valor *false*, pois o valor de b é menor que o valor de a.
+        boolean menorIgual = (b <= c); //A variável menorIgual ficará com o valor *true*, pois o valor de b é menor que o valor de c.
 Operadores lógicos:
 
 Esses operadores são usados quando queremos verificar duas ou mais condições e/ou expressões na aplicação. Eles fazem a comparação de valores booleanos e retornam também um resultado booleano.
@@ -53,34 +53,39 @@ O operador AND (&&), que traduzindo para o português seria o E, é usado para v
 
 O operador OR (||), que traduzindo para o português seria o OU, é usado para verificar se pelo menos uma das condições é verdadeira. Se pelo menos uma das condições for verdadeira, o resultado será verdadeiro. Caso contrário, o resultado será falso. Aqui está um exemplo:
 
-boolean a = true;
-boolean b = false;
-    if (a || b) {
-        // Este código será executado, já que a é verdadeiro, mesmo que b seja falso.
-    }
+    boolean a = true;
+    boolean b = false;
+        if (a || b) {
+            // Este código será executado, já que a é verdadeiro, mesmo que b seja falso.
+        }
+        
 O operador NOT (!) é usado para negar uma condição. Se a condição for verdadeira, o resultado será falso. Se a condição for falsa, o resultado será verdadeiro. Aqui está um exemplo:
 
-boolean a = true;
-    if (!a) {
-    // Este código não será executado, já que a é verdadeiro.
-}
+    boolean a = true;
+        if (!a) {
+       // Este código não será executado, já que a é verdadeiro.
+    }
+    
 Operadores de incremento:
 
 Além dos operadores citados anteriormente, o operador de incremento é usado para aumentar o valor de uma variável em 1. Existem dois tipos de operadores de incremento: o operador de pré-incremento (++variavel) e o operador de pós-incremento (variavel++).
 
 O operador de pré-incremento (++variavel) aumenta o valor da variável em 1 antes de usar a variável em uma expressão. Aqui está um exemplo:
 
-int num = 5;
-int resultado = ++num; //num é incrementado para 6 e depois atribuído a resultado
-System.out.println(num); // imprime 6
-System.out.println(resultado); // imprime 6
+    int num = 5;
+    int resultado = ++num; //num é incrementado para 6 e depois atribuído a resultado
+    System.out.println(num); // imprime 6
+    System.out.println(resultado); // imprime 6
+    
 Já o operador de pós-incremento (variavel++) aumenta o valor da variável em 1 depois de usar a variável em uma expressão. Aqui está um exemplo:
 
-int num = 5;
-int resultado = num++; //num é atribuído primeiramente à variável resultado e depois incrementado para 6
-System.out.println(num); // imprime 6
-System.out.println(resultado); // imprime 5
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+    int num = 5;
+    int resultado = num++; //num é atribuído primeiramente à variável resultado e depois incrementado para 6
+    System.out.println(num); // imprime 6
+    System.out.println(resultado); // imprime 5
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 RESUMO LURI Claro! Nesta aula, aprendemos sobre os diferentes tipos de operadores em Java, que são fundamentais para manipular dados em nossas aplicações. Aqui está um resumo dos principais operadores abordados:
 
@@ -95,7 +100,8 @@ RESUMO LURI Claro! Nesta aula, aprendemos sobre os diferentes tipos de operadore
 - Operadores de Incremento: Aumentam o valor de uma variável em 1, podendo ser pré-incremento (++variavel) ou pós-incremento (variavel++).
 
 - Esses operadores são essenciais para a construção de lógica em nossas aplicações Java. Se precisar de mais detalhes sobre algum operador específico, estou aqui para ajudar!
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: CONVENÇÃO DE CÓDIGO:
 
@@ -123,7 +129,8 @@ Essas são apenas algumas das convenções de código mais comuns no Java. Segui
 
 É importante lembrar que as convenções de código são apenas recomendações, e não regras obrigatórias. No entanto, seguir essas convenções pode ajudar a criar um padrão consistente em todo o seu código Java e também torná-lo mais fácil de compartilhar e colaborar com outros desenvolvedores.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: TIPOS PRIMTIVOS:
 
@@ -147,7 +154,8 @@ float O tipo float é utilizado para representar valores numéricos de ponto flu
 
 double O tipo double é similar o float, entretanto ele ocupa 64 bits de memória e pode representar números decimais com até 15 dígitos.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: COMENTÁRIOS NO CÓDIGO FONTE:
 
@@ -169,7 +177,8 @@ de várias linhas em Java
 que será ignorado pelo compilador */
 Comentários são importantes? Os comentários são importantes porque ajudam a tornar o código mais legível e compreensível para outras pessoas que vão precisar ler e dar manutenção no código. Isso é especialmente importante quando várias pessoas trabalham no mesmo projeto. Comentários claros e concisos ajudam a explicar o que o código está fazendo, por que ele foi escrito daquela maneira e como ele funciona.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: STRING E TEXT BLOCK Em Java, a classe String é uma das mais importantes e utilizadas. Ela é responsável por representar uma sequência de caracteres, ou seja, um texto.
 
@@ -207,7 +216,8 @@ String mensagem = """
                   """;
 Nesse exemplo, a variável mensagem recebe um Text Block com o texto "Olá, mundo! Este é um Text Block. Ele permite escrever textos com múltiplas linhas sem precisar usar caracteres de escape ou quebras de linha manualmente!".
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+/------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: FORMATAÇÃO DE TEXTO: Em Java, é possível formatar textos e números de diversas maneiras. Isso pode ser útil em diversas situações, como ao exibir valores para o usuário de uma maneira mais legível.
 
@@ -239,7 +249,8 @@ Boas vindas ao curso de Java.
 
 Teremos 4 aulas para te mostrar o que é preciso para você dar o seu primeiro mergulho na linguagem!
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: CASTING Casting é um recurso utilizado em Java para converter um tipo de dado em outro. Essa conversão pode ser feita de forma automática pelo compilador (conversão implícita), quando o tipo de dado de destino é compatível com o tipo de dado de origem, ou de forma manual (conversão explícita), utilizando o operador de casting.
 
@@ -259,7 +270,8 @@ No exemplo anterior, o valor da variável x é convertido em um valor inteiro ut
 
 Abaixo tem uma tabela, onde você pode visualizar mais facilmente as conversões que são implícitas e as que necessitam ser feitas de forma explícita.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Nessa aula você aprendeu: A trabalhar com variáveis: recurso utilizado para armazenar valores em memória;
 
@@ -272,7 +284,8 @@ boolean: recebe 2 valores, true ou false;
 Como representar textos em Java, utilizando a classe String;
 A realizar casting de valores, para resolver situações de tipos incompatíveis no momento de realizar um cálculo ou atribuição de uma variável.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: SWITCH CASE
 
@@ -338,7 +351,8 @@ Vantagens do switch case:
 
 Em resumo, o switch case torna o código mais fácil de entender e mais legível, em comparação ao if/else, especialmente quando há várias condições possíveis.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: A CLASSE SCANNER
 
@@ -373,7 +387,8 @@ Depois, usamos o método nextLine() para ler uma linha de texto. Além desse, ut
 
 Você pode encontrar a lista completa de métodos na documentação oficial do Java. (https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html)
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #######################################################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 O que aprendemos 03. Controlando o fluxo da aplicação.
 
