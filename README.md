@@ -811,5 +811,103 @@ Uma questão importante relacionada com referências a objetos em Java é a ques
 
 No exemplo de código anterior, a saída no console será: "Diferentes". Embora os dois objetos tenham as mesmas informações na memória, a comparação com == verifica se as referências são iguais, ou seja, se apontam para o mesmo objeto na memória.
 
-
+---------------------------------------------------------------
 Checar atividade "Trabalhando com listas e coleções de dados"
+---------------------------------------------------------------
+
+Além da interface Comparable, o Java possui uma outra interface chamada Comparator, que nos fornece outra alternativa para ordenação de coleções.
+
+Você pode entender melhor a diferença entre elas, com exemplos em códigos, lendo o artigo Ordenando coleções com Comparable e Comparator.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Para saber mais: Interfaces Comparable e Comparator:
+
+Além da interface Comparable, o Java possui uma outra interface chamada Comparator, que nos fornece outra alternativa para ordenação de coleções.
+
+Você pode entender melhor a diferença entre elas, com exemplos em códigos, lendo o artigo Ordenando coleções com Comparable e Comparator. - https://www.alura.com.br/artigos/ordenando-colecoes-com-comparable-e-comparator
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Para saber mais: Outras classes de listas no Java:
+
+O Java oferece diferentes classes para representar uma lista de objetos. Essas classes são úteis em diferentes cenários, dependendo das necessidades de cada aplicação.
+
+As classes mais comuns para representar uma lista no Java são:
+
+ArrayList
+A principal característica do ArrayList é que ele é baseado em um array dinâmico. Ele armazena os elementos em uma matriz interna e, conforme novos elementos são adicionados, o tamanho da matriz é automaticamente ajustado para acomodar o novo elemento. Da mesma forma, quando um elemento é removido, o tamanho do array é ajustado para evitar o desperdício de espaço. O ArrayList é amplamente utilizado devido à sua facilidade de uso e eficiência em termos de desempenho.
+
+LinkedList
+A classe LinkedList fornece uma lista encadeada de elementos. Diferentemente do ArrayList, que é baseado em um array, o LinkedList é baseado em uma lista encadeada, o que significa que cada elemento da lista é um objeto que contém uma referência para o próximo elemento. Isso permite que os elementos sejam adicionados e removidos de maneira eficiente em qualquer posição da lista, mas pode tornar a pesquisa de um elemento específico menos eficiente.
+
+O LinkedList é uma boa escolha quando a inserção e remoção de elementos em qualquer posição da lista é frequente e quando não é necessário acessar os elementos de forma aleatória.
+
+Vector
+A classe Vector é semelhante ao ArrayList, mas é sincronizada, o que significa que é segura para uso em threads concorrentes. No entanto, a sincronização adiciona uma sobrecarga de desempenho, então o Vector pode ser mais lento que o ArrayList em algumas situações.
+
+Stack
+A classe Stack implementa uma pilha, que é uma coleção ordenada de elementos onde a inserção e remoção de elementos ocorrem sempre no mesmo extremo da lista. Os elementos são adicionados e removidos em uma ordem conhecida como "last-in, first-out" (LIFO), ou seja, o último elemento adicionado é o primeiro a ser removido. A classe Stack é usada com frequência em algoritmos de processamento de texto, bem como em outras situações em que a LIFO é a maneira natural de organizar os dados.
+
+Cada uma dessas classes tem seus próprios pontos fortes e fracos, e a escolha de qual usar dependerá das necessidades específicas da aplicação. Para um melhor entendimento sobre estruturas de dados, recomendamos a leitura dos seguintes artigos:
+
+Estruturas de dados: uma introdução - https://www.alura.com.br/artigos/estruturas-de-dados-introducao
+Estrutura de Dados: computação na prática com Java - https://www.alura.com.br/artigos/estrutura-dados-computacao-na-pratica-com-java
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Para saber mais: Map e HashMap:
+
+Uma das características mais importantes do Java é sua vasta biblioteca padrão, que oferece muitas classes e interfaces úteis para os desenvolvedores. Entre elas, estão o Map e o HashMap, que são ferramentas essenciais para associação de chaves e valores em muitas aplicações Java.
+
+Map
+O Map é uma interface que permite que os desenvolvedores associem chaves a valores. É uma estrutura de dados útil para muitas aplicações Java, especialmente aquelas que envolvem a manipulação de grandes quantidades de dados, portanto, é comum usá-lo para realizar buscas, atualização e recuperação de elementos por chaves
+
+Ele é implementado por diversas classes, sendo a mais comum delas o HashMap.
+
+HashMap
+O HashMap é uma classe que implementa a interface Map usando uma tabela hash para armazenar os pares chave-valor. Ele é conhecido por sua eficiência em termos de tempo de execução. Essa classe tem uma complexidade de tempo O(1) - constante - para inserção, recuperação e remoção de elementos. Isso significa que o desempenho do HashMap não depende do tamanho da coleção de dados!
+
+No entanto, é importante lembrar que o HashMap não mantém a ordem de inserção dos elementos e não garante a ordem dos elementos na saída. Isso ocorre porque a ordem dos elementos depende da função de hash usada para mapear as chaves para índices na tabela hash. Além disso, o desempenho do HashMap pode ser afetado se houver muitas colisões de hash entre as chaves.
+
+Por exemplo:
+
+    import java.util.HashMap;
+    import java.util.Map;
+    
+    public class ExemploHashMap {
+    
+        public static void main(String[] args) {
+            //Criando um objeto da classe HashMap que implementa a interface Map
+            Map<String, Integer> usandoHashMap = new HashMap<>();
+    
+            // Adicionando pares chave-valor
+            usandoHashMap.put("Gatos", 1);
+            usandoHashMap.put("Cachorros", 2);
+            usandoHashMap.put("Roedores", 3);
+    
+            // Acessando um valor através de uma chave
+            int valor = usandoHashMap.get("Cachorros");
+            System.out.println("Valor da chave Cachorros: " + valor);
+    
+            // Removendo um par chave-valor
+            usandoHashMap.remove("Gatos");
+    
+            // Iterando sobre as chaves
+            for (String chave : usandoHashMap.keySet()) {
+                System.out.println("Chave: " + chave);
+                System.out.println("Valor: " + usandoHashMap.get(chave));
+            }
+        }
+    }
+
+O resultado será:
+
+    Valor da chave Cachorros: 2
+    Chave: Cachorros
+    Valor: 2
+    Chave: Roedores
+    Valor: 3
