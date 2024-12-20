@@ -1,5 +1,7 @@
 
-                                              JAVA: Criando sua primeira aplicação
+                                          ##########################################
+                                          ## JAVA: Criando sua primeira aplicação ##
+                                          ##########################################
 
 PARA SABER MAIS: CONVERÇÃO DE CÓDIGO:
 
@@ -25,6 +27,7 @@ Os operadores aritméticos são usados para realizar operações matemáticas b�
         int c = 10 * 5; // Atribui o valor 50 à variável c
         int d = 10 / 5; // Atribui o valor 2 à variável d
         int e = 10 % 3; // Atribui o valor 1 à variável e (o resto da divisão de 10 por 3 é 1)
+
 Operadores relacionais:
 
 Os operadores relacionais são usados para comparar valores. Eles retornam um valor booleano (verdadeiro ou falso). Trabalharemos melhor com eles quando estivermos na aula de condicionais, onde vamos modificar o fluxo da aplicação dada alguma condição. São eles:
@@ -43,6 +46,7 @@ Os operadores relacionais são usados para comparar valores. Eles retornam um va
         boolean diferente = (b != c); //A variável diferente ficará com o valor *true*, pois o valor de b é diferente do valor de c.
         boolean maior = (b > a); //A variável maior ficará com o valor *false*, pois o valor de b é menor que o valor de a.
         boolean menorIgual = (b <= c); //A variável menorIgual ficará com o valor *true*, pois o valor de b é menor que o valor de c.
+
 Operadores lógicos:
 
 Esses operadores são usados quando queremos verificar duas ou mais condições e/ou expressões na aplicação. Eles fazem a comparação de valores booleanos e retornam também um resultado booleano.
@@ -167,14 +171,14 @@ Comentários de linha única: São comentários que aparecem em uma única linha
 
 Exemplo:
 
-// Esta é uma linha de comentário que será ignorada pelo compilador
+    // Esta é uma linha de comentário que será ignorada pelo compilador
 Comentários de várias linhas: Esses comentários podem abranger várias linhas e são delimitados por "/" e "/". O compilador Java ignora todo o texto que aparece entre esses dois símbolos.
 
 Exemplo:
 
-/* Este é um exemplo de comentário
-de várias linhas em Java
-que será ignorado pelo compilador */
+    /* Este é um exemplo de comentário
+    de várias linhas em Java
+    que será ignorado pelo compilador */
 Comentários são importantes? Os comentários são importantes porque ajudam a tornar o código mais legível e compreensível para outras pessoas que vão precisar ler e dar manutenção no código. Isso é especialmente importante quando várias pessoas trabalham no mesmo projeto. Comentários claros e concisos ajudam a explicar o que o código está fazendo, por que ele foi escrito daquela maneira e como ele funciona.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -185,21 +189,24 @@ PARA SABER MAIS: STRING E TEXT BLOCK Em Java, a classe String é uma das mais im
 Criação de Strings Para criar uma String em Java, basta utilizar aspas duplas para delimitar o texto. Por exemplo:
 
     String nome = "Alura";
+    
 Nesse exemplo, a variável nome recebe uma String com o texto "Alura". É possível concatenar duas ou mais Strings utilizando o operador +, por exemplo:
 
     String saudacao = "Olá, ";
     String nome = "Alura";
     String mensagem = saudacao + nome + "!";
+    
 Nesse caso, a variável mensagem receberá a String "Olá, Alura!".
 
 Comparação de Strings Em Java, é possível comparar duas Strings utilizando o operador ==. Porém, esse operador verifica apenas se as duas variáveis apontam para o mesmo objeto na memória, e não se o conteúdo das Strings é igual. Para comparar o conteúdo de duas Strings, é necessário utilizar o método equals(). Por exemplo:
 
-String senha = "12345";
-    if (senha.equals("12345")) {
-        System.out.println("Acesso autorizado!");
-    } else {
+    String senha = "12345";
+        if (senha.equals("12345")) {
+            System.out.println("Acesso autorizado!");
+        } else {
         System.out.println("Senha incorreta.");
     }
+    
 Nesse caso, o método equals() é utilizado para comparar o conteúdo da variável senha com a String "12345". Se as duas Strings forem iguais, a mensagem "Acesso autorizado!" será impressa, caso contrário, a mensagem "Senha incorreta." será impressa.
 
 Mais adiante trabalharemos também com o método equalsIgnoreCase(), que é usado para que a comparação de Strings desconsidere as letras maiúsculas e minúsculas. Utilizando apenas o equals, as String “alura” e “Alura” seriam consideradas diferentes.
@@ -208,15 +215,15 @@ Text Block Introduzido na versão 15 do Java, o Text Block é uma nova forma de 
 
 Sintaxe do Text Block Para criar um Text Block em Java, basta utilizar três aspas duplas para delimitar o texto, seguidas de uma quebra de linha. Por exemplo:
 
-String mensagem = """
-                  Olá, mundo!
-                  Este é um Text Block.
-                  Ele permite escrever textos com múltiplas linhas
-                  sem precisar usar caracteres de escape ou quebras de linha manualmente ou concatenações.
-                  """;
+    String mensagem = """
+                      Olá, mundo!
+                      Este é um Text Block.
+                      Ele permite escrever textos com múltiplas linhas
+                      sem precisar usar caracteres de escape ou quebras de linha manualmente ou concatenações.
+                      """;
 Nesse exemplo, a variável mensagem recebe um Text Block com o texto "Olá, mundo! Este é um Text Block. Ele permite escrever textos com múltiplas linhas sem precisar usar caracteres de escape ou quebras de linha manualmente!".
 
-/------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 PARA SABER MAIS: FORMATAÇÃO DE TEXTO: Em Java, é possível formatar textos e números de diversas maneiras. Isso pode ser útil em diversas situações, como ao exibir valores para o usuário de uma maneira mais legível.
@@ -227,6 +234,7 @@ Uma das maneiras mais comuns de se formatar textos em Java é utilizando o méto
     int idade = 30;
     double valor = 55.9999;
     System.out.println(String.format("Meu nome é %s, eu tenho %d anos e hoje gastei %.2f reais", nome, idade, valor));
+    
 Nesse exemplo, os valores das variáveis nome, idade e valor são passados como parâmetros para o método String.format, substituindo os placeholders %s, %d e %.2f, respectivamente. O resultado impresso será "Meu nome é Maria, eu tenho 30 anos e hoje gastei 55,99 reais". Perceba também que o placeholder %.2f indica que o valor deve ser formatado com duas casas decimais.
 
 Esse exemplo do que foi feito para o String.format também pode ser usado com Text Block, onde usa-se o método que citei em aula, o formatted, para informar as variáveis que deverão ser utilizadas no lugar dos placeholders. Veja esse exemplo:
@@ -241,6 +249,7 @@ int aulas = 4;
                       """.formatted(nome, aulas);
 
     System.out.println(mensagem);
+
 O resultado impresso será:
 
 Olá, João!
@@ -260,12 +269,14 @@ Casting implícito O casting implícito é realizado automaticamente pelo compil
 
     int x = 10;
     double y = x; // casting implícito
+    
 Casting explícito
 
 O casting explícito é realizado quando o tipo de dado de origem é incompatível com o tipo de dado de destino. Nesse caso, devemos utilizar o operador de casting para realizar a conversão:
 
     double x = 10.5;
     int y = (int) x; // casting explícitoCopiar código
+    
 No exemplo anterior, o valor da variável x é convertido em um valor inteiro utilizando o casting explícito. É importante notar que, neste caso, a parte decimal será descartada e o valor atribuído à variável y será 10.
 
 Abaixo tem uma tabela, onde você pode visualizar mais facilmente as conversões que são implícitas e as que necessitam ser feitas de forma explícita.
@@ -308,6 +319,7 @@ A sintaxe do switch case em Java é a seguinte:
           // código a ser executado se a expressão não for igual a nenhum valor
           break;
     }
+    
 A expressão é uma variável ou uma expressão de código que será avaliada. Cada case é uma possível condição que pode ser atendida pela expressão. Quando a expressão é igual ao valor especificado em um determinado case, o código correspondente a esse case será executado. A palavra-chave break é usada para sair do switch case após a execução do código correspondente.
 
 O case default é opcional e é executado quando nenhum dos cases especificados é atendido.
@@ -345,6 +357,7 @@ Veja um exemplo simples de uso do switch case em Java para verificar o dia da se
     }
 
     System.out.println("O dia " + dia + " é " + nomeDia);
+    
 Nesse exemplo, a expressão é a variável dia, que contém o valor 3. O switch case verifica o valor da variável dia e executa o código correspondente ao caso em que dia é igual a 3. O resultado será a impressão no console: "O dia 3 é terça-feira".
 
 Vantagens do switch case:
@@ -363,6 +376,7 @@ Ela oferece uma série de métodos para ler dados de diferentes tipos, como inte
 Para utilizar a classe Scanner, primeiro é necessário importá-la no início do seu programa. Provavelmente ao incluir a mesma no código, a IDE já vai sugerir o import. Esse import ficará como descrito abaixo:
 
     import java.util.Scanner;
+    
 Veja um exemplo básico de como utilizar a classe Scanner para ler dados distintos:
 
     public class ExemploScanner {
@@ -381,6 +395,7 @@ Veja um exemplo básico de como utilizar a classe Scanner para ler dados distint
             scanner.close();
         }
     }
+    
 Nesse exemplo, primeiro importamos a classe Scanner e, em seguida, criamos uma instância dela passando o objeto System.in' como parâmetro para indicar que queremos ler a entrada do usuário pelo teclado.
 
 Depois, usamos o método nextLine() para ler uma linha de texto. Além desse, utilizamos também o nextInt() para ler um número inteiro e o nextDouble() para ler um número decimal.
@@ -411,8 +426,9 @@ Iago, parabéns pela dedicação aos estudos! Você mencionou o uso de variávei
 
 
                                               
-                                              
-                                              JAVA: Aplicando a Orientação a Objetos
+                                            ############################################
+                                            ## JAVA: Aplicando a Orientação a Objetos ##
+                                            ############################################
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                                                                
