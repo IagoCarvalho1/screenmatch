@@ -281,6 +281,9 @@ No exemplo anterior, o valor da variável x é convertido em um valor inteiro ut
 
 Abaixo tem uma tabela, onde você pode visualizar mais facilmente as conversões que são implícitas e as que necessitam ser feitas de forma explícita.
 
+
+![image](https://github.com/user-attachments/assets/c9fa1550-190b-43d0-b9cd-340ee6a9f6ae)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
