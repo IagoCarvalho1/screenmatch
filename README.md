@@ -3,7 +3,7 @@
                                           ## JAVA: Criando sua primeira aplicação ##
                                           ##########################################
 
-PARA SABER MAIS: CONVERÇÃO DE CÓDIGO:
+# PARA SABER MAIS: CONVERÇÃO DE CÓDIGO:
 
 No Java temos diversos tipos de operadores para lidar com os dados que estamos trabalhando em nossa aplicação. Vou detalhar melhor alguns deles aqui, que já mencionei nos vídeos:
 
@@ -91,7 +91,9 @@ Já o operador de pós-incremento (variavel++) aumenta o valor da variável em 1
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-RESUMO LURI Claro! Nesta aula, aprendemos sobre os diferentes tipos de operadores em Java, que são fundamentais para manipular dados em nossas aplicações. Aqui está um resumo dos principais operadores abordados:
+# RESUMO LURI
+
+Claro! Nesta aula, aprendemos sobre os diferentes tipos de operadores em Java, que são fundamentais para manipular dados em nossas aplicações. Aqui está um resumo dos principais operadores abordados:
 
 - Operadores de Atribuição: Usados para atribuir valores a variáveis. O operador básico é o "=", e existem operadores combinados como "+=" que facilitam a atribuição.
 
@@ -107,7 +109,7 @@ RESUMO LURI Claro! Nesta aula, aprendemos sobre os diferentes tipos de operadore
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: CONVENÇÃO DE CÓDIGO:
+# PARA SABER MAIS: CONVENÇÃO DE CÓDIGO:
 
 A convenção de código do Java é um conjunto de regras recomendadas para escrever código Java que é fácil de ler, entender e manter. Essas regras foram definidas pela Oracle, a empresa que mantém a linguagem Java, e são amplamente seguidas pela comunidade de desenvolvedores Java.
 
@@ -136,7 +138,7 @@ Essas são apenas algumas das convenções de código mais comuns no Java. Segui
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: TIPOS PRIMTIVOS:
+# PARA SABER MAIS: TIPOS PRIMTIVOS:
 
 Em Java, assim como na maioria das linguagens de programação, existem os tipos primitivos, que são os tipos de dados mais básicos e fundamentais da linguagem. Eles são utilizados para representar valores simples e são definidos pela própria linguagem.
 
@@ -161,7 +163,7 @@ double O tipo double é similar o float, entretanto ele ocupa 64 bits de memóri
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: COMENTÁRIOS NO CÓDIGO FONTE:
+# PARA SABER MAIS: COMENTÁRIOS NO CÓDIGO FONTE:
 
 Ao escrever código em Java, é importante que o seu código seja legível e compreensível para outras pessoas, além de você mesmo no futuro. Uma das maneiras de fazer isso é por meio do uso de comentários de código, pois eles ajudam a explicar o que o seu código está fazendo e por que ele foi escrito daquela maneira.
 
@@ -184,7 +186,7 @@ Comentários são importantes? Os comentários são importantes porque ajudam a 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: STRING E TEXT BLOCK Em Java, a classe String é uma das mais importantes e utilizadas. Ela é responsável por representar uma sequência de caracteres, ou seja, um texto.
+# PARA SABER MAIS: STRING E TEXT BLOCK Em Java, a classe String é uma das mais importantes e utilizadas. Ela é responsável por representar uma sequência de caracteres, ou seja, um texto.
 
 Criação de Strings Para criar uma String em Java, basta utilizar aspas duplas para delimitar o texto. Por exemplo:
 
@@ -226,7 +228,7 @@ Nesse exemplo, a variável mensagem recebe um Text Block com o texto "Olá, mund
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: FORMATAÇÃO DE TEXTO: Em Java, é possível formatar textos e números de diversas maneiras. Isso pode ser útil em diversas situações, como ao exibir valores para o usuário de uma maneira mais legível.
+# ARA SABER MAIS: FORMATAÇÃO DE TEXTO: Em Java, é possível formatar textos e números de diversas maneiras. Isso pode ser útil em diversas situações, como ao exibir valores para o usuário de uma maneira mais legível.
 
 Uma das maneiras mais comuns de se formatar textos em Java é utilizando o método format(), da classe String. Esse método permite formatar um texto utilizando diversos placeholders, que são representados pelo caractere % seguido de uma letra que indica o tipo de dado que será inserido no placeholder. Por exemplo, %s indica que uma String será inserida no placeholder, %d indica um valor inteiro e %f indica um valor de ponto flutuante. Vamos ver um exemplo:
 
@@ -261,7 +263,7 @@ Teremos 4 aulas para te mostrar o que é preciso para você dar o seu primeiro m
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: CASTING Casting é um recurso utilizado em Java para converter um tipo de dado em outro. Essa conversão pode ser feita de forma automática pelo compilador (conversão implícita), quando o tipo de dado de destino é compatível com o tipo de dado de origem, ou de forma manual (conversão explícita), utilizando o operador de casting.
+# PARA SABER MAIS: CASTING Casting é um recurso utilizado em Java para converter um tipo de dado em outro. Essa conversão pode ser feita de forma automática pelo compilador (conversão implícita), quando o tipo de dado de destino é compatível com o tipo de dado de origem, ou de forma manual (conversão explícita), utilizando o operador de casting.
 
 O casting é utilizado para permitir que tipos de dados incompatíveis possam ser utilizados em uma mesma operação ou expressão. Por exemplo, se um método espera um parâmetro do tipo int e o valor que se deseja passar é do tipo double, é necessário fazer um casting para converter o valor em int.
 
@@ -287,7 +289,7 @@ Abaixo tem uma tabela, onde você pode visualizar mais facilmente as conversões
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Nessa aula você aprendeu: A trabalhar com variáveis: recurso utilizado para armazenar valores em memória;
+# Nessa aula você aprendeu: A trabalhar com variáveis: recurso utilizado para armazenar valores em memória;
 
 Sobre tipos primitivos:
 
@@ -301,7 +303,7 @@ A realizar casting de valores, para resolver situações de tipos incompatíveis
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: SWITCH CASE
+# PARA SABER MAIS: SWITCH CASE
 
 Uma alternativa ao if/else é o switch case, que é uma estrutura de controle de fluxo que permite executar diferentes ações com base no valor de uma expressão. É uma forma mais simplificada e legível de escrever vários blocos if/else encadeados.
 
@@ -370,7 +372,7 @@ Em resumo, o switch case torna o código mais fácil de entender e mais legível
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-PARA SABER MAIS: A CLASSE SCANNER
+# PARA SABER MAIS: A CLASSE SCANNER
 
 A classe Scanner do Java é utilizada para ler dados de entrada em um programa Java. Esses dados podem ser lidos a partir de várias fontes de entrada, como arquivos, fluxos de entrada, Strings e até mesmo a entrada do usuário através do teclado, como vimos em aula.
 
@@ -408,7 +410,7 @@ Você pode encontrar a lista completa de métodos na documentação oficial do J
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-O que aprendemos 03. Controlando o fluxo da aplicação.
+# O que aprendemos 03. Controlando o fluxo da aplicação.
 
 Iago, parabéns pela dedicação aos estudos! Você mencionou o uso de variáveis, a tag SCAN (que presumo ser uma referência à classe Scanner), e o uso de estruturas de repetição for e while. Isso é ótimo! Você captou os pontos principais da aula relacionados às estruturas de repetição e à leitura de dados do teclado. Além disso, a aula também abordou a lógica condicional, que permite que uma aplicação escolha entre diferentes ações com base em determinadas condições. Vimos como comparar valores usando operadores como igual (==), diferente (!=), maior que (>), menor que (<), maior ou igual (>=) e menor ou igual (<=). Aprender a usar esses operadores é fundamental para construir programas que tomem decisões. Também vimos diferentes tipos de estruturas condicionais e como escolher a mais adequada para cada situação. A escolha entre if, if-else, if-else if-else depende da complexidade da lógica que você precisa implementar. Aprender a analisar o problema e escolher a estrutura condicional mais eficiente é uma habilidade importante para se desenvolver. Continue estudando e praticando!                                              
 
@@ -505,6 +507,8 @@ Continue estudando e praticando!
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# Para saber mais: Modificadores de acesso 
+
 Em Java, os modificadores de acesso são palavras-chave que definem o nível de visibilidade de classes, atributos e métodos, sendo que eles ajudam a garantir a segurança e encapsulamento do código.
 
 Existem quatro tipos de modificadores de acesso em Java: public, protected, private e default (também conhecido como package-private).
@@ -587,7 +591,7 @@ Existe ainda um último modificador de acesso, que é o protected, mas falaremos
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: a palavra chave "this"
+#  saber mais: a palavra chave "this"
 
 A documentação do Java, conhecida como JavaDoc, é uma referência completa para todas as classes, interfaces e métodos disponíveis na plataforma Java. Ela está disponível online e pode ser acessada neste site da Oracle. (https://docs.oracle.com/en/java/javase/17/docs/api/index.html)
 
@@ -600,7 +604,7 @@ Não deixe de entrar no site do JavaDoc e explorar os pacotes e classes que a li
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Padrão de nomes de pacotes
+# Para saber mais: Padrão de nomes de pacotes
 
 Em Java, pacotes são usados para agrupar classes que estão relacionadas a alguma funcionalidade. Eles ajudam a organizar o código, facilitando o seu gerenciamento e evitando que centenas de classes distintas fiquem todas misturadas num único diretório.
 
@@ -613,6 +617,7 @@ Isso ajuda a garantir que o nome do pacote seja exclusivo e evita conflitos de n
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# Para saber mais: This
 
 “This”, traduzindo para o português (Isto/este/esta), é usado para fazer referência aos atributos da classe, especialmente em métodos que têm parâmetros com o mesmo nome do atributo da classe em que estamos trabalhando.
 
@@ -660,7 +665,7 @@ Podemos concluir então que “this” se refere ao objeto atual e não ao parâ
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+# Atividade
 
 Imagine que você esteja analisando o código de uma aplicação Java e encontra a seguinte classe:
 
@@ -775,6 +780,7 @@ Lembre-se que a melhor forma de lidar com um valor inválido (no caso, um saldo 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# Para saber mais: Getters e Setters
 
 Em Java, getters e setters são métodos usados para acessar e modificar os valores das variáveis privadas de uma classe. Isso segue o princípio de encapsulamento, que protege os dados da classe de acessos ou alterações indevidos.
 
@@ -850,7 +856,7 @@ Ao usar ambos, você garante o encapsulamento e mantém o controle sobre como os
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Entendendo melhor a herança:
+# Para saber mais: Entendendo melhor a herança:
 
 A herança é um conceito fundamental da orientação a objetos, sendo implementada em Java através da relação é um entre classes. Isso significa que uma classe pode herdar atributos e métodos de outra classe, tornando com isso o código mais reutilizável.
 
@@ -933,7 +939,7 @@ No código anterior, a classe ContaCorrentePessoaFisica está herdando de ContaC
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Para saber mais: Anotações no Java:
+# Para saber mais: Anotações no Java:
 
 As anotações, também conhecidas como annotations, são uma forma de adicionar configurações ao código Java de uma maneira bem simples. Elas são usadas para fornecer informações adicionais sobre o código, como o significado de uma classe, um método ou um atributo.
 
@@ -946,7 +952,7 @@ As anotações são muito úteis e comuns em aplicações Java, sendo importante
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: O modificador Protected
+# Para saber mais: O modificador Protected
 
 Ao usar herança no Java, temos a possibilidade de utilizar o modificador de acesso protected, que permite que os atributos de uma classe sejam acessados por outras classes do mesmo pacote e também por suas subclasses, independentemente do pacote em que se encontram.
 
@@ -1018,7 +1024,7 @@ Repare que agora o atributo saldo foi acessado diretamente pela classe ContaPoup
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Entendendo melhor interfaces
+# Para saber mais: Entendendo melhor interfaces
 
 Em Java, interfaces são uma forma de definir um contrato que as classes devem seguir, sendo que ele define quais métodos devem ser implementados pelas classes que o implementarem. Interfaces permitem que diferentes classes possam ser tratadas de maneira padronizada, via polimorfismo, tornando assim o código fácil de estender com novos comportamentos.
 
@@ -1091,7 +1097,7 @@ Isso é muito útil quando queremos tratar vários objetos de classes diferentes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Declarando variáveis com var:
+# Para saber mais: Declarando variáveis com var:
 
 A partir da versão 10 do Java, foi adicionada uma nova funcionalidade para a declaração de variáveis chamada var. Essa nova palavra-chave permite que o compilador infira automaticamente o tipo da variável com base no valor atribuído a ela. Isso pode tornar o código mais limpo e legível, além de reduzir a digitação de código redundante.
 
@@ -1120,7 +1126,7 @@ A declaração de variáveis com var é uma funcionalidade relativamente nova no
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Arrays no Java
+# Para saber mais: Arrays no Java
 
 Em Java, arrays são estruturas de dados que permitem armazenar uma coleção de elementos do mesmo tipo. Eles são muito utilizados para manipulação de dados em projetos de programação.
 
@@ -1159,7 +1165,7 @@ Justamente por conta desses problemas e dificuldades é que não devemos utiliza
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Construtor padrão
+# Para saber mais: Construtor padrão
 
 Em Java, um construtor é um método especial usado para criar e inicializar um objeto recém-criado. Quando uma classe é definida, ela pode ter um ou mais construtores, sendo que se nenhum construtor for definido explicitamente, o Java criará um construtor default (padrão) automaticamente.
 
@@ -1185,7 +1191,7 @@ Se uma classe define explicitamente um ou mais construtores, mas não define um 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Outras formas de percorrer a lista:
+# Para saber mais: Outras formas de percorrer a lista:
 
 A forma mais comum de percorrer uma lista no Java é utilizando o laço foreach tradicional, também conhecido como for-each. Esse laço permite que se percorra todos os elementos de uma lista, sem a necessidade de se preocupar com índices ou o tamanho dela, tornando o código mais simples e legível. Por exemplo, suponha que tenhamos uma lista de nomes de pessoas e que desejamos imprimi-los na tela:
 
@@ -1216,11 +1222,14 @@ No código anterior, o símbolo :: é a sintaxe do Method Reference, que no exem
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# Para saber mais: Referências
+
 Referências são ponteiros para objetos em memória, ou seja, elas apontam para um objeto e permitem que você trabalhe com ele. No Java, toda variável de objeto é na verdade uma referência a esse objeto que foi alocado na memória.
 
 Quando você instancia um objeto, está, na realidade, criando um novo bloco de memória que armazena as informações desse objeto. A maneira de chegar a esse bloco de memória, para armazenar e ler informações dele, ocorre por meio de uma referência, que é representada por uma variável. Por exemplo:
 
-Filme filme1 = new Filme("Avatar", 2009);Copiar código
+    Filme filme1 = new Filme("Avatar", 2009);
+
 No exemplo de código anterior, criamos um novo objeto da classe Filme e armazenamos uma referência a ele na variável filme1.
 
 É importante lembrar que as referências a objetos em Java não são o próprio objeto em si, pois elas apenas apontam para o objeto. Quando você passa uma referência a um método ou atribui uma referência a outra variável, está apenas copiando o valor da referência e não do objeto em si. Por exemplo:
@@ -1255,7 +1264,7 @@ Você pode entender melhor a diferença entre elas, com exemplos em códigos, le
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Interfaces Comparable e Comparator:
+# Para saber mais: Interfaces Comparable e Comparator:
 
 Além da interface Comparable, o Java possui uma outra interface chamada Comparator, que nos fornece outra alternativa para ordenação de coleções.
 
@@ -1264,7 +1273,7 @@ Você pode entender melhor a diferença entre elas, com exemplos em códigos, le
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Outras classes de listas no Java:
+# Para saber mais: Outras classes de listas no Java:
 
 O Java oferece diferentes classes para representar uma lista de objetos. Essas classes são úteis em diferentes cenários, dependendo das necessidades de cada aplicação.
 
@@ -1292,7 +1301,7 @@ Estrutura de Dados: computação na prática com Java - https://www.alura.com.br
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Para saber mais: Map e HashMap:
+# Para saber mais: Map e HashMap:
 
 Uma das características mais importantes do Java é sua vasta biblioteca padrão, que oferece muitas classes e interfaces úteis para os desenvolvedores. Entre elas, estão o Map e o HashMap, que são ferramentas essenciais para associação de chaves e valores em muitas aplicações Java.
 
@@ -1344,3 +1353,25 @@ O resultado será:
     Valor: 2
     Chave: Roedores
     Valor: 3
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Para saber mais: Padrões de projeto
+
+Os padrões de projeto, também conhecidos como design patterns, são soluções reutilizáveis para problemas comuns de desenvolvimento de software. Eles surgiram na década de 1990, quando um grupo de desenvolvedores identificou que muitos projetos de software apresentavam problemas semelhantes, que podiam ser resolvidos por soluções também semelhantes.
+
+Os padrões de projeto podem ser divididos em três categorias:
+
+    1- Padrões de criação: são padrões que lidam com a criação de objetos, visando garantir a flexibilidade e reutilização do código. Alguns exemplos de padrões de criação são: Factory Method, Builder e Singleton.
+
+    2- Padrões de estrutura: são padrões que lidam com a organização de objetos em estruturas maiores, buscando simplificar a comunicação entre objetos e reduzir o acoplamento entre eles. Alguns exemplos de padrões de estrutura são: Adapter, Facade e Composite.
+
+    3- Padrões de comportamento: são padrões que lidam com a comunicação entre objetos, buscando definir o comportamento esperado em situações específicas. Alguns exemplos de padrões de comportamento são: Observer, Command e Strategy.
+
+Ao utilizar padrões de projeto, é possível aumentar a qualidade do código, tornando-o mais legível, flexível e de fácil manutenção.
+
+Caso você queira aprofundar os conhecimentos em padrões de projetos em Java, recomendamos os nossos seguintes cursos:
+
+1- Design Patterns em Java I: boas práticas de programação (https://cursos.alura.com.br/course/introducao-design-patterns-java)
+2- Design Patterns em Java II: avançando nas boas práticas de programação (https://cursos.alura.com.br/course/avancando-design-patterns-java)
