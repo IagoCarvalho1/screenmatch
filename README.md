@@ -1390,3 +1390,137 @@ Frameworks, por outro lado, são estruturas de software que fornecem uma arquite
 Existem muitos frameworks populares em Java, cada um com suas próprias características e objetivos. Alguns exemplos incluem o Spring Framework, que é um framework que facilita a criação de aplicações Web e APIs Rest complexas em Java; o Hibernate, que é um framework de mapeamento objeto-relacional e simplifica muito o processo de integração de uma aplicação Java com um banco de dados relacional.
 
 Aqui na Alura temos diversas formações com cursos que ensinam a utilizar as principais bibliotecas e frameworks Java, para que você tenha um aprendizado mais completo. Entretanto, esses são assuntos um pouco mais avançados e vão exigir que, primeiramente, você já tenha uma boa base de conhecimentos do Java e da orientação a objetos.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Para saber mais: Java Record
+
+Lançado oficialmente no Java 16, mas disponível desde o Java 14 de maneira experimental, o Record é um recurso que permite representar uma classe imutável, contendo apenas atributos, construtor e métodos de leitura, de uma maneira muito simples e enxuta.
+
+Esse recurso se encaixa perfeitamente quando precisamos criar um objeto apenas para representar dados, sem nenhum tipo de comportamento.
+
+Para se criar uma classe imutável, sem a utilização do Record, era necessário escrever muito código. Vejamos um exemplo de uma classe que representa um telefone:
+
+    public final class Telefone {
+    
+        private final String ddd;
+        private final String numero;
+    
+        public Telefone(String ddd, String numero) {
+            this.ddd = ddd;
+            this.numero = numero;
+        }
+    
+        @Override
+        public int hashCode() {
+            return Objects.hash(ddd, numero);
+        }
+    
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            } else if (!(obj instanceof Telefone)) {
+                return false;
+            } else {
+                Telefone other = (Telefone) obj;
+                return Objects.equals(ddd, other.ddd)
+                  && Objects.equals(numero, other.numero);
+            }
+        }
+    
+        public String getDdd() {
+            return this.ddd;
+        }
+    
+        public String getNumero() {
+            return this.numero;
+        }
+    }
+
+Agora com o Record, todo esse código pode ser resumido com uma única linha:
+
+    public record Telefone(String ddd, String numero){}
+
+Muito mais simples, não?!
+
+Por baixo dos panos, o Java vai transformar esse Record em uma classe imutável, muito similar ao código exibido anteriormente.
+
+Mais detalhes sobre esse recurso podem ser encontrados na documentação oficial do Java.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Para saber mais: imutabilidade:
+
+A imutabilidade, citada anteriormente ao falarmos sobre record, é um conceito importante em Java, que se refere à capacidade de um objeto não poder ser alterado depois de criado. Existem algumas classes que são imutáveis por padrão, como por exemplo, as classes String, Integer, Boolean, entre outras. Isso significa que, uma vez criado um objeto dessas classes, não é possível modificar o seu estado.
+
+Vamos exemplificar. Dado o record abaixo:
+
+    public record Estudante(String nome, int idade) {}
+
+Uma vez criado um objeto Estudante, seus valores não podem ser modificados:
+
+    Estudante estudante1 = new Estudante(“Alice”, 19);
+
+Observe que após essa criação, eu não consigo setar outro nome ou idade para o objeto estudante1.
+
+    estudante1.setNome(“Maria”); //Essa possibilidade não existe
+    estudante1.nome = “Maria”; //Essa possibilidade não existe
+
+Qualquer uma das tentativas acima, vai apresentar erro de compilação, pois não é possível atribuir nenhum outro nome a variável estudante1.
+
+Com relação ao record, fica bem claro, certo? Mas e a String, por exemplo? Eu consigo fazer os passos abaixo no código:
+
+    String nome = “Maria”;
+    nome = “Alice”;
+
+Se a String é imutável, o certo era eu não conseguir atribuir o conteúdo “Alice” à variável nome, correto?
+
+No caso da String e de outras classes imutáveis que citei acima, a variável nome contém uma referência ao objeto da classe String que contém o valor "Maria".
+
+No entanto, quando você tenta alterar o valor da string, o que realmente acontece é que um novo objeto da classe String é criado com o novo valor e a variável é atualizada para armazenar uma referência ao novo objeto.
+
+Por isso, podemos dizer que a classe String é imutável, porque uma vez que um objeto da classe String é criado, ele não pode ser alterado. No entanto, as variáveis que armazenam referências a objetos da classe String podem ser atualizadas para referenciar novos objetos, que são criados a partir do conteúdo do objeto original.
+
+A imutabilidade é importante por várias razões, entre elas:
+
+Concorrência: objetos imutáveis são seguros para uso em ambientes concorrentes, já que não há necessidade de sincronização.
+Segurança: objetos imutáveis são seguros contra alterações acidentais ou mal-intencionadas.
+Desempenho: objetos imutáveis podem ser armazenados em cache e reutilizados, o que pode melhorar o desempenho.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Para saber mais: o bloco finally
+
+Aprendemos que quando ocorre uma exceção, o Java permite tratar o erro usando a declaração try-catch. Entretanto, existe ainda o bloco finally, que é opcional, mas pode ser útil em certas situações.
+
+O finally é usado para executar um bloco de código independentemente de ocorrer uma exceção ou não, ou seja, ele sempre é executado. Isso pode ser útil quando precisamos executar um código tanto no try, caso não ocorra uma exceção, quanto no catch, caso uma exceção seja lançada. Por exemplo, suponha que você tenha o seguinte código:
+
+    try {
+    metodoQuePodeLancarExcecao();
+    System.out.println("Executou");
+    
+    System.out.println("Finalizou!");
+    } catch (Exception e) {
+    System.out.println("Deu erro!");
+    
+    System.out.println("Finalizou!");
+    }
+
+Perceba no código anterior que a instrução System.out.println("Finalizou!"); deve ser sempre executada, independente de ter acontecido ou exception ou não. Mas o problema é que ela acabou tendo de ser duplicada tanto no try quanto no catch. O bloco finally nos ajuda justamente a evitar essa duplicação de código:
+
+    try {
+    metodoQuePodeLancarExcecao();
+    System.out.println("Executou");
+    } catch (Exception e) {
+    System.out.println("Deu erro!");
+    } finally {
+    System.out.println("Finalizou!");
+    }
+
+Repare que agora a instrução aparece apenas uma vez, dentro do bloco finally, evitando com isso uma duplicação de código desnecessária.
+
+O finally é muito utilizado em situações onde é necessário limpar recursos, fechar conexões de banco de dados ou fechar arquivos que foram abertos no bloco try.
