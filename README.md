@@ -186,7 +186,9 @@ Comentários são importantes? Os comentários são importantes porque ajudam a 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# PARA SABER MAIS: STRING E TEXT BLOCK Em Java, a classe String é uma das mais importantes e utilizadas. Ela é responsável por representar uma sequência de caracteres, ou seja, um texto.
+# PARA SABER MAIS: STRING E TEXT BLOCK 
+
+Em Java, a classe String é uma das mais importantes e utilizadas. Ela é responsável por representar uma sequência de caracteres, ou seja, um texto.
 
 Criação de Strings Para criar uma String em Java, basta utilizar aspas duplas para delimitar o texto. Por exemplo:
 
