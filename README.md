@@ -996,10 +996,10 @@ No código anterior, repare que no método calcularJuros, da classe ContaPoupanc
 
 Podemos declarar o atributo saldo como protected, para evitar essa situação e liberar o acesso direto a ele pelas classes que herdam da classe Conta:
 
-public class Conta {
+    public class Conta {
 
-private String titular;
-protected double saldo;
+    private String titular;
+    protected double saldo;
 
     public void sacar(double valor) {
     //implementacao do metodo omitida
